@@ -1,84 +1,76 @@
-# 💻 Week 1 - Design Principles & Patterns (Java Hands-On)
+# 🌟 Cognizant Digital Nurture 4.0 — Java FSE Deepskilling
 
-Welcome to my **Java Learning Program Solutions**!  
-This repository contains my hands-on implementations of **11 core object-oriented design patterns**, all wrapped up beautifully under Week 1. ✨
+Welcome to my solutions repository for the **Cognizant Digital Nurture 4.0 – Java Full Stack Engineer Deepskilling Program**.  
+This repo includes hands-on Java-based exercises from **Week 1**, focusing on:
 
----
+- 🔧 Object-Oriented Design Principles and Patterns
+- 📊 Data Structures and Algorithms (DSA)
 
-## 📦 Folder Structure
-
-Week1_DesignPrinciplesAndPatterns_HandsOn/
-├── 01_SingletonPattern/
-│ ├── Code/
-│ └── Output/
-├── 02_FactoryMethodPattern/
-│ ├── Code/
-│ └── Output/
-├── 03_BuilderPattern/
-│ ├── Code/
-│ └── Output/
-...
-├── 11_DependencyInjection/
-│ ├── Code/
-│ └── Output/
-
-yaml
-Copy code
-
-Each subfolder includes:
-- 📂 **Code/** – Java source files for the pattern
-- 🖼️ **Output/** – Screenshots of the working console output
+Each exercise is organized into separate folders with clean structure and console output screenshots.
 
 ---
 
-## 📚 Patterns Implemented
+## 📁 Folder Structure
 
-| No. | Pattern                 | Description |
-|-----|--------------------------|-------------|
-| 01  | **Singleton**            | Ensures only one instance exists |
-| 02  | **Factory Method**       | Creates objects without exposing instantiation logic |
-| 03  | **Builder**              | Builds complex objects step-by-step |
-| 04  | **Adapter**              | Makes incompatible interfaces work together |
-| 05  | **Decorator**            | Adds responsibilities dynamically |
-| 06  | **Proxy**                | Adds a representative with control access |
-| 07  | **Observer**             | Notifies dependent objects on state change |
-| 08  | **Strategy**             | Switchable behaviors at runtime |
-| 09  | **Command**              | Encapsulates actions as objects |
-| 10  | **MVC**                  | Separates data, view, and control |
-| 11  | **Dependency Injection** | Injects dependencies for loose coupling |
+| Folder Name | Module Focus | Description |
+|-------------|--------------|-------------|
+| [`Week1_DesignPrinciplesAndPatterns_HandsOn`](./Week1_DesignPrinciplesAndPatterns_HandsOn) | Design Principles & Patterns | Exercises on SOLID principles, Singleton, Factory, Adapter, Proxy, Decorator, etc. |
+| [`Week1_DataStructuresAndAlgorithms_HandsOn`](./Week1_DataStructuresAndAlgorithms_HandsOn) | DSA in Java | Exercises covering arrays, HashMaps, sorting, searching, linked lists, and recursion |
+
+Each folder contains:
+- 📂 `Code/` — Java source files  
+- 📂 `Output/` — Screenshots of console results  
+- ✅ Fully working and tested Java programs
 
 ---
 
-## 💡 How to Run
+## 🚀 How to Run Locally
 
-1. Clone the repo  
+1. Clone the repo:
    ```bash
    git clone https://github.com/Reethika083/learning-program-solutions.git
-Navigate into any Code/ folder
+Go to any exercise’s Code/ folder
 
 Compile and run:
 
 bash
-Copy code
+Copy
+Edit
 javac *.java
 java Main
-🌟 Author
-Made with 💖 by Reethika
-Part of my Java Learning Program journey 🚀
+🎯 Purpose
+This repository documents all the Week 1 hands-on assignments completed as part of the official Cognizant Digital Nurture 4.0 – Java FSE Deepskilling program.
+It demonstrates applied understanding of:
 
-Every class, every pattern, every line of code — written with love and precision 💅
+Object-Oriented Design
+
+Core Java Programming
+
+Data Structures & Algorithms
+
+👩‍💻 Author
+Developed by Reethika
+📧 https://github.com/Reethika083
+
+✅ Week 1 Complete — Ready to grow into Week 2 and beyond 🚀
 
 yaml
-Copy code
+Copy
+Edit
 
 ---
 
-### ✅ What to Do Next
+## ✅ What To Do Next
 
-1. Create a file in your repo root called `README.md`
-2. Paste the above content in it
-3. Save and commit:
+1. Save this as `README.md` in your root folder:
+C:\Users\admin\Desktop\Projects\learning-program-solution\README.md
+
+sql
+Copy
+Edit
+
+2. Then in PowerShell:
 ```bash
 git add README.md
-git commit -m "📝 Added README for Week 1 Design Patterns"
+git commit -m "📘 Added main README for Cognizant Digital Nurture 4.0 Java FSE"
 git push origin main
