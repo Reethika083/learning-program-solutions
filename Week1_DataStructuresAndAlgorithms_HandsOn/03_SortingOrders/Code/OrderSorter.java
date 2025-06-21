@@ -3,7 +3,7 @@ import java.util.Comparator;
 
 public class OrderSorter {
 
-    // Sort by amount (ascending) using bubble sort (for learning)
+    // Bubble sort by amount
     public static void bubbleSortByAmount(Order[] orders) {
         int n = orders.length;
         for (int i = 0; i < n - 1; i++) {
@@ -17,12 +17,12 @@ public class OrderSorter {
         }
     }
 
-    // Sort by customer name (built-in sort)
+    // Built-in sort by name
     public static void sortByName(Order[] orders) {
         Arrays.sort(orders, Comparator.comparing(Order::getCustomerName));
     }
 
-    // Sort by order ID (built-in sort)
+    // Built-in sort by order ID
     public static void sortById(Order[] orders) {
         Arrays.sort(orders, Comparator.comparing(Order::getOrderId));
     }

@@ -13,7 +13,7 @@ public class ProductSearch {
 
     // Binary Search
     public static int binarySearch(String[] items, String target) {
-        Arrays.sort(items); // Make sure list is sorted
+        Arrays.sort(items); // Sort before binary search
         return Arrays.binarySearch(items, target);
     }
 }

@@ -10,12 +10,12 @@ public class Main {
         System.out.println("🔍 Linear Search for '" + target1 + "': " +
                 (linearResult >= 0 ? "Found at index " + linearResult : "Not found"));
 
-        // Binary Search (sorted inside method)
+        // Binary Search
         int binaryResult = ProductSearch.binarySearch(products, target1);
         System.out.println("⚡ Binary Search for '" + target1 + "': " +
                 (binaryResult >= 0 ? "Found at index " + binaryResult : "Not found"));
 
-        // Try a non-existent item
+        // Try a product that doesn't exist
         int failResult = ProductSearch.linearSearch(products, target2);
         System.out.println("🔍 Linear Search for '" + target2 + "': " +
                 (failResult >= 0 ? "Found at index " + failResult : "Not found"));
