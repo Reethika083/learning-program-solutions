@@ -1,58 +1,53 @@
-# 🌟 Cognizant Digital Nurture 4.0 — Java FSE Deepskilling
+<h1 align="center">🌟 Cognizant Digital Nurture 4.0 — Java FSE Deepskilling</h1>
 
-Welcome to my solutions repository for the **Cognizant Digital Nurture 4.0 – Java Full Stack Engineer Deepskilling Program**.  
-This repo includes hands-on Java-based exercises from **Week 1**, focusing on:
-
-- 🔧 Object-Oriented Design Principles and Patterns
-- 📊 Data Structures and Algorithms (DSA)
-
-Each exercise is organized into separate folders with clean structure and console output screenshots.
+<p align="center">
+  🚀 A curated collection of Java hands-on exercises from <strong>Week 1</strong> of the Cognizant Java Full Stack Engineer Deepskilling program.
+</p>
 
 ---
 
-## 📁 Folder Structure
+## 👩‍💻 Participant Details
 
-| Folder Name | Module Focus | Description |
-|-------------|--------------|-------------|
-| [`Week1_DesignPrinciplesAndPatterns_HandsOn`](./Week1_DesignPrinciplesAndPatterns_HandsOn) | Design Principles & Patterns | Exercises on SOLID principles, Singleton, Factory, Adapter, Proxy, Decorator, etc. |
-| [`Week1_DataStructuresAndAlgorithms_HandsOn`](./Week1_DataStructuresAndAlgorithms_HandsOn) | DSA in Java | Exercises covering arrays, HashMaps, sorting, searching, linked lists, and recursion |
-
-Each folder contains:
-- 📂 `Code/` — Java source files  
-- 📂 `Output/` — Screenshots of console results  
-- ✅ Fully working and tested Java programs
+| Detail            | Info                                                  |
+|-------------------|--------------------------------------------------------|
+| **Name**          | Reethika B                                             |
+| **Superset ID**   | 6053613                                                |
+| **Email**         | [itsme.reethu004@gmail.com](mailto:itsme.reethu004@gmail.com) |
+| **GitHub Repo**   | [github.com/Reethika083/learning-program-solutions](https://github.com/Reethika083/learning-program-solutions) |
 
 ---
 
-## 🚀 How to Run Locally
+## 📚 Week 1 Modules Covered
 
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/Reethika083/learning-program-solutions.git
-Go to any exercise’s Code/ folder
+### 🔧 1. Design Principles & Patterns
+> Covers SOLID principles, Singleton, Factory, Builder, Adapter, Proxy, Decorator and more...
 
-Compile and run:
+📁 Folder: [`Week1_DesignPrinciplesAndPatterns_HandsOn`](./Week1_DesignPrinciplesAndPatterns_HandsOn)
 
-bash
-Copy
-Edit
-javac *.java
-java Main
-🎯 Purpose
-This repository documents all the Week 1 hands-on assignments completed as part of the official Cognizant Digital Nurture 4.0 – Java FSE Deepskilling program.
-It demonstrates applied understanding of:
+---
 
-Object-Oriented Design
+### 📊 2. Data Structures & Algorithms
+> Includes HashMaps, Arrays, Sorting, Searching, Linked Lists, and Recursion using Java.
 
-Core Java Programming
+📁 Folder: [`Week1_DataStructuresAndAlgorithms_HandsOn`](./Week1_DataStructuresAndAlgorithms_HandsOn)
 
-Data Structures & Algorithms
+---
 
-👩‍💻 Author
-Developed by Reethika
-📧 https://github.com/Reethika083
+## 🗂️ Folder Structure
 
-✅ Week 1 Complete — Ready to grow into Week 2 and beyond 🚀
+Each module folder contains:
+- `Code/` — Java source files  
+- `Output/` — Screenshots of console results  
+- ✅ Tested, well-structured implementations
+
+learning-program-solutions/
+├── Week1_DesignPrinciplesAndPatterns_HandsOn/
+│ ├── 01_SingletonPattern/
+│ ├── ...
+│
+├── Week1_DataStructuresAndAlgorithms_HandsOn/
+│ ├── 01_InventoryManagement/
+│ ├── ...
 
 yaml
 Copy
@@ -60,17 +55,49 @@ Edit
 
 ---
 
-## ✅ What To Do Next
+## 💻 How to Run Locally
 
-1. Save this as `README.md` in your root folder:
-C:\Users\admin\Desktop\Projects\learning-program-solution\README.md
+1. Clone the repo
+   ```bash
+   git clone https://github.com/Reethika083/learning-program-solutions.git
+Navigate to any exercise’s Code/ folder
 
-sql
+Compile & run the Java files
+
+bash
 Copy
 Edit
+javac *.java
+java Main
+🎯 Purpose
+This repository showcases all Week 1 hands-on Java exercises completed as part of the official Cognizant Digital Nurture 4.0 — Java FSE program.
+It reflects strong fundamentals in:
 
-2. Then in PowerShell:
-```bash
+✅ Object-Oriented Design Principles
+
+✅ Core Java Programming
+
+✅ Data Structures & Algorithms
+
+<h2 align="center">✅ Week 1 Completed — Onwards to Week 2 🚀</h2> ```
+🔥 Instructions to Use
+Open your repo’s folder:
+
+makefile
+Copy
+Edit
+C:\Users\admin\Desktop\Projects\learning-program-solution
+Replace README.md with this updated version:
+
+powershell
+Copy
+Edit
+notepad README.md
+Then save & push:
+
+bash
+Copy
+Edit
 git add README.md
-git commit -m "📘 Added main README for Cognizant Digital Nurture 4.0 Java FSE"
+git commit -m "🎨 Polished README with layout, table and markdown design"
 git push origin main
