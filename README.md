@@ -83,60 +83,52 @@
 
 ## 🗂️ Folder Structure
 
+```plaintext
 learning-program-solutions/
 ├── Week1_DesignPrinciplesAndPatterns_HandsOn/
 ├── Week1_DataStructuresAndAlgorithms_HandsOn/
 │
 ├── Week2_PLSQL_HandsOn/
 ├── Week2_JUnit_Mockito_SLF4J_HandsOn/
-│ ├── Week2_JUnitBasics_HandsOn/
-│ ├── Week2_JUnitAdvanced_HandsOn/
-│ ├── Week2_Mockito_HandsOn/
-│ ├── Week2_AdvancedMockito_HandsOn/
-│ ├── Week2_SLF4J_Logging_HandsOn/
+│   ├── Week2_JUnitBasics_HandsOn/
+│   ├── Week2_JUnitAdvanced_HandsOn/
+│   ├── Week2_Mockito_HandsOn/
+│   ├── Week2_AdvancedMockito_HandsOn/
+│   ├── Week2_SLF4J_Logging_HandsOn/
 │
 ├── Week2_SpringTesting_HandsOn/
 ├── Week2_SpringMocking_HandsOn/
+```
 
-yaml
-Copy
-Edit
+## 💻 How to Run This Module Locally
 
----
+1. Make sure Maven is installed on your system.
+2. Open terminal and navigate to this directory.
+3. Run the following command:
+mvn test
 
-## 💻 How to Run Locally
+## 🎯 Purpose
+This repository serves as a comprehensive showcase of all Week 1 and Week 2 hands-on Java and PL/SQL exercises completed as part of the Cognizant Digital Nurture 4.0 — Java Full Stack Engineer program.
 
-1. Clone the repo
-   ```bash
-   git clone https://github.com/Reethika083/learning-program-solutions.git
-Navigate to any exercise’s Code/ folder and compile:
+It reflects strong foundational skills in:
 
-bash
-Copy
-Edit
-cd Week2_JUnit_Mockito_SLF4J_HandsOn/Week2_JUnitBasics_HandsOn/01_SetupJUnit/Code
-mvn clean test
-🎯 Purpose
-This repository showcases all Week 1 and Week 2 hands-on Java exercises completed as part of the official Cognizant Digital Nurture 4.0 — Java FSE program.
+✅ Object-Oriented Design Principles and Patterns
 
-It reflects strong fundamentals in:
-
-✅ Object-Oriented Design Principles
 ✅ Core Java Programming
-✅ Data Structures & Algorithms
-✅ JUnit & Mockito Unit Testing
-✅ Spring Boot Testing & Logging
-✅ PL/SQL Programming
 
-<h2 align="center">✅ Week 2 Completed — Onwards to Week 3 🚀</h2> ```
-🛠️ Instructions to use:
-Replace your existing README.md file with the above.
+✅ Data Structures & Algorithms (DSA)
 
-Save and push to GitHub:
+✅ Unit Testing with JUnit and Mockito
 
-bash
-Copy
-Edit
+✅ Spring Boot Testing with MockMvc and SLF4J Logging
+
+✅ Oracle PL/SQL Programming (Procedures, Triggers, Cursors, Packages)
+
+## 🛠️ How to Use This Repo
+To commit and push your updates:
+
 git add README.md
-git commit -m "📘 Updated README with Week 2 hands-on modules and structure"
+git commit -m "📘 Updated README with Week 2 hands-on modules"
 git push origin main
+
+
