@@ -1,0 +1,6 @@
+@echo off
+echo Compiling...
+javac -cp "lib/*" -d bin src/com/example/hibernate/*.java
+
+echo Running...
+java -cp "lib/*;bin" com.example.hibernate.MainApp
