@@ -10,6 +10,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
+import java.util.List;
 import java.util.Set;
 
 @SpringBootApplication
@@ -38,7 +39,8 @@ public class OrmLearnApplication {
 
         // ✅ Uncomment the one you want to test
         // testGetEmployee();
-        testAddSkillToEmployee();
+        // testAddSkillToEmployee();
+        testGetAllPermanentEmployees(); // 🆕 for Ex 2
     }
 
     private static void testGetEmployee() {
@@ -47,7 +49,7 @@ public class OrmLearnApplication {
         employeeRepository.findById(1).ifPresentOrElse(emp -> {
             LOGGER.debug("Employee: {}", emp);
             LOGGER.debug("Department: {}", emp.getDepartment());
-            LOGGER.debug("Skills: {}", emp.getSkillList()); // ✅ Skill log
+            LOGGER.debug("Skills: {}", emp.getSkillList());
         }, () -> {
             LOGGER.warn("Employee with ID 1 not found.");
         });
@@ -73,5 +75,18 @@ public class OrmLearnApplication {
         }
 
         LOGGER.info("End testAddSkillToEmployee");
+    }
+
+    private static void testGetAllPermanentEmployees() {
+        LOGGER.info("Start testGetAllPermanentEmployees");
+
+        List<Employee> permanentEmployees = employeeService.getAllPermanentEmployees();
+        permanentEmployees.forEach(emp -> {
+            LOGGER.debug("Employee: {}", emp);
+            LOGGER.debug("Department: {}", emp.getDepartment());
+            LOGGER.debug("Skills: {}", emp.getSkillList());
+        });
+
+        LOGGER.info("End testGetAllPermanentEmployees");
     }
 }
