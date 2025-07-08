@@ -21,8 +21,9 @@ public class OrmLearnApplication {
         countryService = context.getBean(CountryService.class);
 
         try {
-            testAddCountry(); // Exercise 7
-            testUpdateCountry(); // 👈 Exercise 8
+            testAddCountry(); // 🟢 Hands-on 7
+            testUpdateCountry(); // 🟢 Hands-on 8
+            testDeleteCountry(); // 🟢 Hands-on 9 ✅
         } catch (CountryNotFoundException e) {
             LOGGER.error("Exception: {}", e.getMessage());
         }
@@ -52,5 +53,14 @@ public class OrmLearnApplication {
         LOGGER.debug("Updated Country: {}", updated);
 
         LOGGER.info("End testUpdateCountry");
+    }
+
+    private static void testDeleteCountry() {
+        LOGGER.info("Start testDeleteCountry");
+
+        countryService.deleteCountry("ZZ");
+
+        LOGGER.info("Deleted country with code 'ZZ'");
+        LOGGER.info("End testDeleteCountry");
     }
 }

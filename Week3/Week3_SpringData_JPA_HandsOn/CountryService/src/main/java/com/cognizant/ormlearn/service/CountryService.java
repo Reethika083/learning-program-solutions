@@ -1,8 +1,8 @@
 package com.cognizant.ormlearn.service;
 
-import com.cognizant.ormlearn.exception.CountryNotFoundException;
 import com.cognizant.ormlearn.model.Country;
 import com.cognizant.ormlearn.repository.CountryRepository;
+import com.cognizant.ormlearn.exception.CountryNotFoundException;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,8 +21,7 @@ public class CountryService {
     }
 
     @Transactional
-    public Country findCountryByCode(String countryCode)
-            throws CountryNotFoundException {
+    public Country findCountryByCode(String countryCode) throws CountryNotFoundException {
         Optional<Country> result = countryRepository.findById(countryCode);
         if (!result.isPresent()) {
             throw new CountryNotFoundException("Country not found: " + countryCode);
@@ -31,13 +30,14 @@ public class CountryService {
     }
 
     @Transactional
-    public void updateCountry(String code, String name) throws CountryNotFoundException {
-        Optional<Country> result = countryRepository.findById(code);
-        if (!result.isPresent()) {
-            throw new CountryNotFoundException("Country not found: " + code);
-        }
-        Country country = result.get();
-        country.setName(name);
+    public void updateCountry(String code, String newName) throws CountryNotFoundException {
+        Country country = findCountryByCode(code);
+        country.setName(newName);
         countryRepository.save(country);
+    }
+
+    @Transactional
+    public void deleteCountry(String code) {
+        countryRepository.deleteById(code);
     }
 }
