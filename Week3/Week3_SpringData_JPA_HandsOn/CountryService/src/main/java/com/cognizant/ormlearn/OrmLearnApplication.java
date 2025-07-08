@@ -21,7 +21,8 @@ public class OrmLearnApplication {
         countryService = context.getBean(CountryService.class);
 
         try {
-            testAddCountry(); // 👈 Run this test
+            testAddCountry(); // Exercise 7
+            testUpdateCountry(); // 👈 Exercise 8
         } catch (CountryNotFoundException e) {
             LOGGER.error("Exception: {}", e.getMessage());
         }
@@ -40,5 +41,16 @@ public class OrmLearnApplication {
         LOGGER.debug("Country: {}", country);
 
         LOGGER.info("End testAddCountry");
+    }
+
+    private static void testUpdateCountry() throws CountryNotFoundException {
+        LOGGER.info("Start testUpdateCountry");
+
+        countryService.updateCountry("ZZ", "Zootopia Updated");
+
+        Country updated = countryService.findCountryByCode("ZZ");
+        LOGGER.debug("Updated Country: {}", updated);
+
+        LOGGER.info("End testUpdateCountry");
     }
 }
