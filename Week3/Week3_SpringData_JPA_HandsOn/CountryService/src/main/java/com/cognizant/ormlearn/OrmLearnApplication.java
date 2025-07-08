@@ -10,17 +10,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
-import java.math.BigDecimal;
-import java.time.LocalDate;
-import java.util.List;
+import java.util.Set;
 
 @SpringBootApplication
 public class OrmLearnApplication {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(OrmLearnApplication.class);
-
-    private static CountryService countryService;
-    private static StockRepository stockRepository;
 
     private static EmployeeRepository employeeRepository;
     private static DepartmentRepository departmentRepository;
@@ -28,68 +23,55 @@ public class OrmLearnApplication {
 
     private static EmployeeService employeeService;
     private static DepartmentService departmentService;
+    private static SkillService skillService;
 
     public static void main(String[] args) {
         ApplicationContext context = SpringApplication.run(OrmLearnApplication.class, args);
 
-        countryService = context.getBean(CountryService.class);
-        stockRepository = context.getBean(StockRepository.class);
         employeeRepository = context.getBean(EmployeeRepository.class);
         departmentRepository = context.getBean(DepartmentRepository.class);
         skillRepository = context.getBean(SkillRepository.class);
 
         employeeService = context.getBean(EmployeeService.class);
         departmentService = context.getBean(DepartmentService.class);
+        skillService = context.getBean(SkillService.class);
 
-        // ✅ Choose only the one you want to test
-
-        // testAddEmployee();
-        // testUpdateEmployee();
-        testGetDepartment(); // 🆕 For Hands-on 5
+        // ✅ Uncomment the one you want to test
+        // testGetEmployee();
+        testAddSkillToEmployee();
     }
 
-    private static void testAddEmployee() {
-        LOGGER.info("Start testAddEmployee");
+    private static void testGetEmployee() {
+        LOGGER.info("Start testGetEmployee");
 
-        Employee employee = new Employee();
-        employee.setName("Reethika");
-        employee.setSalary(70000);
-        employee.setPermanent(true);
-        employee.setDateOfBirth(java.sql.Date.valueOf("2002-08-04"));
+        employeeRepository.findById(1).ifPresentOrElse(emp -> {
+            LOGGER.debug("Employee: {}", emp);
+            LOGGER.debug("Department: {}", emp.getDepartment());
+            LOGGER.debug("Skills: {}", emp.getSkillList()); // ✅ Skill log
+        }, () -> {
+            LOGGER.warn("Employee with ID 1 not found.");
+        });
 
-        Department department = departmentService.get(1);
-        employee.setDepartment(department);
-
-        employeeService.save(employee);
-        LOGGER.debug("Added Employee: {}", employee);
-
-        LOGGER.info("End testAddEmployee");
+        LOGGER.info("End testGetEmployee");
     }
 
-    private static void testUpdateEmployee() {
-        LOGGER.info("Start testUpdateEmployee");
+    private static void testAddSkillToEmployee() {
+        LOGGER.info("Start testAddSkillToEmployee");
 
-        Employee employee = employeeService.get(1);
-        Department newDept = departmentService.get(2);
+        Employee employee = employeeService.get(1); // existing employee ID
+        Skill skill = skillService.get(2); // skill ID to be added
 
-        if (employee != null && newDept != null) {
-            employee.setDepartment(newDept);
+        if (employee != null && skill != null) {
+            Set<Skill> skills = employee.getSkillList();
+            skills.add(skill);
+            employee.setSkillList(skills);
             employeeService.save(employee);
-            LOGGER.debug("Updated Employee: {}", employee);
+
+            LOGGER.debug("Updated Employee with Skills: {}", employee.getSkillList());
         } else {
-            LOGGER.warn("Employee or Department not found.");
+            LOGGER.warn("Employee or Skill not found.");
         }
 
-        LOGGER.info("End testUpdateEmployee");
-    }
-
-    private static void testGetDepartment() {
-        LOGGER.info("Start testGetDepartment");
-
-        Department department = departmentService.get(1); // dept with multiple employees
-        LOGGER.debug("Department: {}", department);
-        LOGGER.debug("Employees: {}", department.getEmployeeList());
-
-        LOGGER.info("End testGetDepartment");
+        LOGGER.info("End testAddSkillToEmployee");
     }
 }
