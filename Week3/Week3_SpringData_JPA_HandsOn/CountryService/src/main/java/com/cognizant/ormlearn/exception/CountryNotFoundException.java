@@ -1,4 +1,4 @@
-package com.cognizant.ormlearn.service.exception;
+package com.cognizant.ormlearn.exception;
 
 public class CountryNotFoundException extends Exception {
     public CountryNotFoundException(String message) {
