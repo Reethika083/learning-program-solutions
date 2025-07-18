@@ -1,9 +1,9 @@
+server:
+  port: 8081
+
 spring:
   security:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: https://issuer.example.com
-
-server:
-  port: 8081
+          enabled: false
