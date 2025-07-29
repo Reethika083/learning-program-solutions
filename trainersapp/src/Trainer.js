@@ -1,7 +1,7 @@
 // src/Trainer.js
 class Trainer {
-  constructor(id, name, email, phone, technology, skills) {
-    this.id = id;
+  constructor(trainerId, name, email, phone, technology, skills) {
+    this.trainerId = trainerId;
     this.name = name;
     this.email = email;
     this.phone = phone;
