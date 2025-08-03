@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import CohortDetails from './CohortDetails';
+import CohortDetails from './CohortDetails.js';
 import { CohortData } from './Cohort';
 
 test('renders a cohort item', () => {
