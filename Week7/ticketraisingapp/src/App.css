@@ -1,0 +1,27 @@
+.App {
+  text-align: center;
+  margin-top: 30px;
+  font-family: Arial, sans-serif;
+}
+
+.formContainer {
+  display: inline-block;
+  text-align: left;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+input, textarea {
+  width: 300px;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 20px;
+  cursor: pointer;
+}
