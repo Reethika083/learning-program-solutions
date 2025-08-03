@@ -1,0 +1,20 @@
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin-top: 30px;
+}
+
+.user-container {
+  display: inline-block;
+  text-align: left;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.user-card img {
+  margin-top: 10px;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+}
